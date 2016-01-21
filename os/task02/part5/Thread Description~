@@ -1,0 +1,22 @@
+
+The threads produce diffrent end resultd for x, depening on the order that the operations are executed across the threads.
+x = x+1 can be split into three instructions, which can be represented as follows:
+ temp = x			read
+ temp = x + 1,			add
+ x = temp			write
+			
+Lowest Value of X = 2
+
+Thread 1		Thread 2		Thread 3
+read			
+			read
+			add
+			write
+			read
+			add
+			write
+add
+write
+			read
+
+Highest Value of X = 9

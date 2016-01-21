@@ -1,0 +1,7 @@
+all: avltreetest
+
+avltreetest: avltree.o avltreetest.c
+	gcc -o avltreetest avltreetest.c avltree.o
+
+%.o: %.c
+	gcc -c $<
